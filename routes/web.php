@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/login/vk', 'AuthVk@redirect');
+Route::get('/login/vk/callback', 'AuthVk@callback');
+
